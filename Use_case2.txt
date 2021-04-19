@@ -1,0 +1,13 @@
+ Q: index=_internal sourcetype=splunkd_ui_access | table file  | dedup file
+ 
+ 
+ run the query between 16th Apr - 18th Apr 
+ 
+ -----show the 4th - 6th row  
+ 
+ 
+ Output --- 
+ file 
+eval-stdin.php
+execute-solution
+microsoft.exchange.ediscovery.exporttool.application
