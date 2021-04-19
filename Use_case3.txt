@@ -1,0 +1,13 @@
+
+Q: 
+index=_internal sourcetype=splunkd_ui_access NOT user="-" 
+| table user,status,bytes
+| dedup user 
+| rename user as employee, status as pf , bytes as ctc 
+
+
+------------------ We want to see the total pf and ctc for student1,student14,student9
+O/p - 
+
+Total                 pf                ctc
+Total Amount         36546              7882
