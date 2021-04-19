@@ -13,4 +13,10 @@ Employee               pf                ctc
 Total Amount         36546              7882
 
 
-Ans : - index=_internal sourcetype=splunkd_ui_access NOT user="-"|table user,status,bytes |dedup user| rename user as Employee , status as PF , bytes as CTC | search (Employee=student1 OR Employee=student14 OR Employee=student9) | addcoltotals labelfield=Employee label="Total Amount" | tail 1
+Ans : - index=_internal sourcetype=splunkd_ui_access NOT user="-" 
+| table user,status,bytes 
+| dedup user 
+| rename user as Employee , status as PF , bytes as CTC 
+| search (Employee=student1 OR Employee=student14 OR Employee=student9) 
+| addcoltotals labelfield=Employee label="Total Amount" 
+| tail 1
