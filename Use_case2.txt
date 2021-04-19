@@ -11,3 +11,8 @@
 eval-stdin.php
 execute-solution
 microsoft.exchange.ediscovery.exporttool.application
+
+
+Ans 1 : - index=_internal sourcetype=splunkd_ui_access | table file  | dedup file | head 6 | tail 3 | tail 3
+Ans 2 : - index=_internal sourcetype=splunkd_ui_access | table file  | dedup file | head 6 |tail 3| reverse
+Ans 3: - index=_internal sourcetype=splunkd_ui_access | table file  | dedup file | head 6 | reverse | head 3 | reverse
