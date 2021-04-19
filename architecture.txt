@@ -1,0 +1,154 @@
+
+
+>>>>>>> Splunk Architecture <<<<<<<<<<<
+1) Universal Forwarder ( UF ) -- Splunk Universal Forwarder Package --- CLI 
+
+Splunk Enterprise Package --- CLI + GUI 
+
+2) Heavy Forwarder ( HF )
+---- Parsing 
+
+this is lalit, he is from chennai
+this is ankit, he is from mumbai 
+
+
+---------
+this is lalit, he is from chennai
+
+this is ankit, he is from mumbai 
+
+
+
+
+------
+
+this is lalit, he is from chennai,
+this is ankit, he is from mumbai 
+
+
+
+
+this is lalit
+
+he is from chennai
+
+this is ankit
+
+he is from mumbai 
+
+-------------
+
+This is ayan and his acc number is 1234674894
+This is rohit and his acc number is 2891490714
+
+
+
+This is ayan and his acc number is xxxx4894
+
+This is rohit and his acc number is xxxx0714
+
+
+
+---- Filtering 
+
+This is ayan he logged in from 198.168.78.90
+This is rohit and he logged out from 189.90.90.34
+This is anil he logged in from 198.234.78.90
+
+
+
+
+This is ayan he logged in from 198.168.78.90
+
+This is anil he logged in from 198.234.78.90
+
+
+3) Indxer ( IDX )
+
+----
+------ indexes
+
+-----------
+------ windows --- 6
+------ cisco --- 1yr
+------ palo
+------ mcafee 
+----- apache
+
+
+----------------- Metadata------ host - Ip address or the host name of the application server ( 198.89.90.78, linux-wipro-001)
+-------------------------------- source ---- Actual path of the data ( /var/log/secure , C:\Program Files\users\a.txt )
+-------------------------------- sourcetype ---- C:\Program Files\apache\websphere\access-12apr.log  ----- accesslog
+                                                 C:\Program Files\apache\websphere\access-13apr.log 
+
+                                                C:\Program Files\apache\websphere\app-12apr.log ------ applog 
+												C:\Program Files\apache\websphere\app-13apr.log 
+												
+												
+												
+												
+												C:\Program Files\apache\web\access-13apr.log 
+4) Search Head ( SH )
+5) Deployment Server ( DS ) 
+6) License Master ( LM )
+
+ ----- 
+ 
+ License Stacking ---
+ 5 GB + 10 GB = 15 GB + 200GB = 215 GB
+  
+--------------------
+215 GB 
+
+
+-----------
+1024 GB ----- /var/log/messages 
+
+
+
+--------------------
+  
+  
+ License Pooling ----
+ 
+ ---- Pool A --- 190 GB --- Indxer(S)  
+ ---- Pool B --- 25 GB ----- SH , DS 
+ 
+ ------------------------ License Violation -------------------
+ > 5 times is a rolling period of 30 days 
+ 
+ 19 apr --- 1 
+ 20 
+ 25
+ 26
+ 27 
+ 28 ------------- violtion 
+ 
+ < 6.5 ----  Enforcement License ---- Indexing Continues ---- Searches Block --
+ >= 6.5 --- No-Enforcement License --- Indexing Continues ---- Searching Continues ---- Splunk can take some legal action against you/ company 
+ 
+ 
+ https://splunkonbigdata.com/2020/07/31/splunk-licensing-enforcement-vs-no-enforcement/
+ 
+ 
+ 18 may 
+ 
+ 
+ --------------------------- License Expires ---------------------------
+ 
+ Indexing Continues ---- Searches Block 
+ 
+----------------- License Master Goes Down -------------------
+> 72 hours ----------- Indexing Continues ---- Searches Block
+
+https://splunkonbigdata.com/2018/09/25/what-happens-when-license-master-goes-down/
+
+ 
+
+
+
+
+
+
+
+
