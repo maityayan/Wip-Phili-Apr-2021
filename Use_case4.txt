@@ -1,0 +1,9 @@
+Q : - index=_internal sourcetype=splunkd_ui_access NOT user="-" 
+| table user,status,bytes | dedup user 
+| rename user as Employee , status as PF , bytes as CTC | addtotals fieldname="Total Salary"
+
+
+--------------- All of employees total salary ---------
+
+Total Salary 
+290752
