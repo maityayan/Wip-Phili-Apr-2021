@@ -1,3 +1,5 @@
 Q: index=_internal sourcetype=splunkd_ui_access | table user,status | dedup user,status  
 
 --- discard the status values --- 300 - 399 
+
+Ans 1 : index=_internal sourcetype=splunkd_ui_access | table user,status | dedup user,status|search NOT (status>=300 AND status<=399)
