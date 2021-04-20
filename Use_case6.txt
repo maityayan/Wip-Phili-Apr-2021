@@ -17,3 +17,11 @@ q: | makeresults
  
  Jayanta Bera
  
+
+
+Ans:
+| makeresults 
+| fields - _time 
+| eval aa="Ayan Maity,Rohit Sharma,Jayanta Bera" , aa=split(aa,",") 
+| mvexpand aa 
+| eval Fname=mvindex(split(aa," "),0) , Lname=mvindex(split(aa," "),1) | fields - aa | eval FullName=Fname." ".Lname | fields FullName
