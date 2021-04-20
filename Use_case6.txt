@@ -1,0 +1,19 @@
+q: | makeresults 
+| fields - _time 
+| eval aa="Ayan Maity,Rohit Sharma,Jayanta Bera" , aa=split(aa,",") 
+| mvexpand aa 
+| eval Fname=mvindex(split(aa," "),0) , Lname=mvindex(split(aa," "),1) | fields - aa
+
+----------------------------------
+
+--- Create the full name ---------------
+
+
+
+ Fullname 
+ Ayan Maity
+ 
+ Rohit Sharma
+ 
+ Jayanta Bera
+ 
