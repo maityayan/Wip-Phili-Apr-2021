@@ -1,0 +1,15 @@
+
+Q: index=_internal sourcetype="scheduler"
+
+index=_internal sourcetype=splunkd_ui_access |
+
+
+-------------- Calculate the total event count for both the sourcetype together --------
+Total Events
+ 174417
+ 
+ Ans: - (index=_internal sourcetype="scheduler") OR (index=_internal sourcetype=splunkd_ui_access ) | stats count as "Total Events"
+ Ans : - index=_internal sourcetype="scheduler" | stats count as scheduler| appendcols [search index=_internal sourcetype=splunkd_ui_access | stats count] |addtotals fieldname="Total Events" | fields "Total Events"
+ Ans: - index=_internal sourcetype=scheduler| stats count|append [|search index=_internal sourcetype="splunkd_ui_access"| stats count] |stats sum(count) as TotalCount
+ 
+ 
