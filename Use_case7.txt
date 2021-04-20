@@ -1,0 +1,3 @@
+index=_internal sourcetype=splunkd_ui_access | top file | eval Designation=if(file="jobs" OR file="control","Manager",if(file="messages","Admin","HR"))
+
+---- Implement the same output using case function ----------
