@@ -1,0 +1,5 @@
+127.0.0.1 - student16 [20/Apr/2021:10:07:26.896 +0000] "GET /en-US/splunkd/__raw/services/messages?output_mode=json&sort_key=timeCreated_epochSecs&sort_dir=desc&count=1000&_=1618895367825 HTTP/1.0" 200 279 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" - f69d6bb9720d3d647b4f1012147f5e5b 0ms
+
+
+f69d6bb9720d3d647b4f1012147f5e5b - transactionid_<student_id>
+0ms - response_time_<student_id>
