@@ -1,0 +1,6 @@
+(index=_internal sourcetype=splunkd_ui_access )
+
+| stats count by user,status
+
+
+-------------- Create a macro in such a way so that people will be able to put "user" and "status" values through search bar and able to get the data -----
