@@ -1,7 +1,9 @@
 Sophos Firewall Blocked IP - <student_id>
 
 
-| tstats count from datamodel=Network_Traffic  by All_Traffic.dest,All_Traffic.src,All_Traffic.action
+| tstats count from datamodel=Network_Traffic where sourcetype=sophos:firewall by All_Traffic.dest,All_Traffic.src,All_Traffic.action 
+| rename All_Traffic.* as * 
+| search action=blocked
 
 ------------
 
