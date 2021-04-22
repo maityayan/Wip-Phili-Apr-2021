@@ -1,0 +1,19 @@
+Sophos Firewall Blocked IP - <student_id>
+
+
+| tstats count from datamodel=Network_Traffic  by All_Traffic.dest,All_Traffic.src,All_Traffic.action
+
+------------
+
+find out the blocked traffic by sophos:firewall .
+Also put the timerange as last 24 hours 
+
+cron ---- every 7minutes 
+
+
+------------------------- Notable Event Sample ---------------------
+Sophos Blocked the Source Ip ( 198.78.67.78) for destination ip ( 189.78.89.67)
+
+--------------------------
+
+Throttle ----------- 10 mins for the same source ip.
