@@ -1,0 +1,11 @@
+| from datamodel:"Network_Traffic" 
+| stats count by src,dest,action,dest_port 
+| iplocation dest prefix=dest_ 
+| iplocation src prefix=src_ 
+| eval Direction=case( isnull(dest_lat) AND isnull(src_lat),"internal",isnotnull(dest_lat) AND isnull(src_lat),"outbound",isnull(dest_lat) AND isnotnull(src_lat),"inbound",isnotnull(dest_lat) AND isnotnull(src_lat),"external",1=1,"unknown") 
+| table src,dest,action,dest_port,count,Direction 
+| search Direction="outbound" NOT action="blocked" 
+| search NOT 
+    [| inputlookup port_whitelist.csv 
+    | fields port 
+    | rename port as dest_port ]
