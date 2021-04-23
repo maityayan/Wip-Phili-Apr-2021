@@ -1,1 +1,30 @@
-| tstats  count  from datamodel=Web.Web where sourcetype=websense:cg:kv by Web.url,Web.action,Web.src,Web.dest,_time | rename Web.* as * | search [ |inputlookup url_filtering.csv | fields URL | rename URL as url ] | search action=allowed | search  [ |inputlookup url_filtering.csv | fields source | rename source as src ] | stats list(*) as * ,list(_time) as time by url | convert ctime(time)
+| tstats count from datamodel=Web.Web where sourcetype=websense:cg:kv by Web.url,Web.action,Web.src,Web.dest,_time 
+| rename Web.* as * 
+| search 
+    [| inputlookup url_filtering.csv 
+    | fields URL 
+    | rename URL as url ] 
+| search action=allowed 
+| search 
+    [| inputlookup url_filtering.csv 
+    | fields source 
+    | rename source as src ] 
+| stats list(*) as * ,list(_time) as time by url 
+| convert ctime(time)
+
+
+
+OR 
+
+
+
+
+| tstats count from datamodel=Web.Web where sourcetype=websense:cg:kv by Web.url,Web.action,Web.src,Web.dest,_time 
+| rename Web.* as * 
+| search 
+    [| inputlookup url_filtering.csv 
+    | fields URL,source
+    | rename URL as url,source as src ] 
+| search action=allowed 
+| stats list(*) as * ,list(_time) as time by url 
+| convert ctime(time)
