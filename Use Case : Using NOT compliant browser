@@ -1,0 +1,1 @@
+| from datamodel:"Web"."Web" | search NOT http_user_agent="*Mozilla/3.0*" NOT http_user_agent="" | stats count by action,src,user,http_user_agent | search action="allowed"
