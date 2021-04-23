@@ -1,0 +1,175 @@
+<nav search_view="search">
+<view name="ess_security_posture" default="true"></view>
+<view name="incident_review"></view>
+
+
+<collection label="Traffic">
+<collection label="Network">
+<view name="network_traffic_dashboard" />
+<view name="network_blocked_traffic_dashboard" />
+</collection>
+<collection  label="Firewall">
+<view name="firewall_traffic_dashboard" />
+<view name="firewall__blocked_traffic_dashboard" />
+</collection>
+</collection>
+
+
+<view name="ess_gt_lister"></view>
+
+<view name="ess_home"></view>
+
+<collection label="Security Intelligence">
+<collection label="Web Intelligence">
+<view name="http_category_analysis"></view>
+<view name="http_user_agent_analysis"></view>
+<view name="new_domain_analysis"></view>
+<view name="url_length_analysis"></view>
+</collection><collection label="Protocol Intelligence"><view name="generic_protocols"></view>
+<view name="traffic_size_analysis"></view>
+<divider></divider><view name="dns_activity"></view>
+<view name="dns_search"></view>
+<divider></divider><view name="ssl_activity"></view>
+<view name="ssl_search"></view>
+<divider></divider><view name="email_activity"></view>
+<view name="email_search"></view>
+<divider></divider></collection><collection label="Threat Intelligence"><view name="threat_activity"></view>
+<view name="threat_artifacts"></view>
+</collection><collection label="User Intelligence"><view name="asset_investigator"></view>
+<view name="identity_investigator"></view>
+<divider></divider><view name="access_anomalies"></view>
+<view name="uba_anomalies"></view>
+<view name="user_activity"></view>
+</collection><view name="risk_analysis"></view>
+<divider></divider><view name="ess_sequence_list">
+</view>
+<divider></divider></collection><collection label="Security Domains">
+<collection label="Access">
+<view name="access_center">
+</view>
+<view name="access_tracker">
+</view>
+<view name="access_search">
+</view>
+<divider></divider><view name="account_management">
+</view>
+<view name="default_accounts">
+</view>
+</collection><collection label="Endpoint">
+<view name="malware_center">
+</view>
+<view name="malware_search">
+</view>
+<view name="malware_operations">
+</view>
+<divider></divider><view name="system_center">
+</view>
+<view name="time_center">
+</view>
+<view name="endpoint_changes">
+</view>
+<divider></divider><view name="update_center">
+</view>
+<view name="update_search">
+</view>
+</collection><collection label="Network">
+<view name="traffic_center">
+</view>
+<view name="traffic_search">
+</view>
+<divider></divider><view name="ids_center">
+</view>
+<view name="ids_search">
+</view>
+<divider></divider><view name="vuln_center">
+</view>
+<view name="vuln_operations">
+</view>
+<view name="vuln_search">
+</view>
+<divider></divider><view name="web_center">
+</view>
+<view name="web_search">
+</view>
+<divider></divider><view name="network_changes">
+</view>
+<view name="port_protocol_tracker">
+</view>
+</collection><collection label="Identity">
+<view name="asset_center">
+</view>
+<divider></divider><view name="identity_center">
+</view>
+<divider></divider><view name="session_center">
+</view>
+</collection></collection><collection label="Configure">
+<a name="ess_configuration" href="/app/SplunkEnterpriseSecuritySuite/ess_configuration">
+All Configurations</a><view name="cim_setup">
+</view>
+<view name="ta_uba_setup">
+</view>
+<divider></divider><collection label="General">
+<a name="general" href="/app/SplunkEnterpriseSecuritySuite/ess_general_settings">
+General Settings</a><a name="ess_credential_management_list" href="/app/SplunkEnterpriseSecuritySuite/ess_credential_management_list">
+Credential Management</a><a name="ess_permissions" href="/app/SplunkEnterpriseSecuritySuite/ess_permissions">
+Permissions</a><a name="ess_navigation_edit" href="/app/SplunkEnterpriseSecuritySuite/ess_navigation_edit">
+Navigation</a><divider></divider><a name="configuration_check" href="/manager/SplunkEnterpriseSecuritySuite/data/inputs/configuration_check">
+Configuration Checker</a></collection><collection label="Content">
+<a name="ess_content_management" href="/app/SplunkEnterpriseSecuritySuite/ess_content_management">
+Content Management</a><a name="ess_use_case_library" href="/app/SplunkEnterpriseSecuritySuite/ess_use_case_library">
+Use Case Library</a></collection><collection label="Data Enrichment">
+<a name="ess_entity_management" href="/app/SplunkEnterpriseSecuritySuite/ess_entity_management">
+Asset and Identity Management</a><divider></divider><a name="threatlist" href="/manager/SplunkEnterpriseSecuritySuite/data/inputs/threatlist">
+Intelligence Downloads</a><a name="threat_intelligence_manager" href="/manager/SplunkEnterpriseSecuritySuite/data/inputs/threat_intelligence_manager">
+Threat Intelligence Management</a><a name="upload_threatintel_doc" href="/app/SplunkEnterpriseSecuritySuite/upload_threatintel_doc">
+Threat Intelligence Uploads</a><divider></divider><a name="whois" href="/manager/SplunkEnterpriseSecuritySuite/data/inputs/whois">
+Whois Management</a></collection><collection label="Incident Management">
+<a name="ess_notable_event_create" href="/app/SplunkEnterpriseSecuritySuite/ess_notable_event_create">
+New Notable Event</a><a name="ess_notable_status_list" href="/app/SplunkEnterpriseSecuritySuite/ess_notable_status_list">
+Status Configuration</a><a name="ess_notable_suppression_list" href="/app/SplunkEnterpriseSecuritySuite/ess_notable_suppression_list">
+Notable Event Suppressions</a><a name="ess_incident_review_configuration" href="/app/SplunkEnterpriseSecuritySuite/ess_incident_review_configuration">
+Incident Review Settings</a></collection></collection><collection label="Search">
+<view name="dashboards">
+</view>
+<view name="reports">
+</view>
+<view name="predictive_analytics">
+</view>
+<view name="data_models">
+</view>
+<view name="search">
+</view>
+</collection><view name="ess_investigation_list">
+</view>
+<collection label="Audit">
+<view name="incident_review_audit">
+</view>
+<view name="ess_investigation_overview">
+</view>
+<view name="suppression_audit">
+</view>
+<view name="ess_modular_action_center">
+</view>
+<divider></divider><view name="per_panel_filtering_audit">
+</view>
+<view name="threat_intelligence_audit">
+</view>
+<view name="mltk_usage_audit">
+</view>
+<divider></divider><view name="ess_confighealth">
+</view>
+<view name="datamodel_audit">
+</view>
+<divider></divider><view name="forwarder_auditing">
+</view>
+<view name="index_auditing">
+</view>
+<view name="search_auditing">
+</view>
+<view name="ess_view_auditing">
+</view>
+<view name="managed_lookups_audit">
+</view>
+<divider></divider><view name="data_protection">
+</view>
+</collection></nav>
